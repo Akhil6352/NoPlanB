@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Startup & Enterprise OS</title>
+    <meta name="description" content="The ultimate one-stop platform for startups to manage finances, employees, marketing, and legal needs.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Setup Icons (Lucide) via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="layers" class="logo-icon"></i>
+                    <h2>Nexus</h2>
+                </div>
+            </div>
+            <nav class="sidebar-nav" id="sidebarNav">
+                <a href="#dashboard" class="nav-item active" data-view="dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#finances" class="nav-item" data-view="finances">
+                    <i data-lucide="wallet"></i>
+                    <span>Finances</span>
+                </a>
+                <a href="#employees" class="nav-item" data-view="employees">
+                    <i data-lucide="users"></i>
+                    <span>Employees</span>
+                </a>
+                <a href="#marketing" class="nav-item" data-view="marketing">
+                    <i data-lucide="trending-up"></i>
+                    <span>Marketing</span>
+                </a>
+                <a href="#legal" class="nav-item" data-view="legal">
+                    <i data-lucide="file-check"></i>
+                    <span>Legal</span>
+                </a>
+                <a href="#planning" class="nav-item" data-view="planning">
+                    <i data-lucide="map"></i>
+                    <span>Planning Tools</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </a>
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=6366f1&color=fff" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <p class="user-name">Admin User</p>
+                        <p class="user-role">Founder</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-search">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search across your business...">
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" aria-label="Notifications">
+                        <i data-lucide="bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="icon-btn" aria-label="Theme toggle" id="themeToggle">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="btn btn-primary">
+                        <i data-lucide="plus"></i>
+                        New Action
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dynamic View Container -->
+            <div class="view-container" id="viewContainer">
+                <!-- Content injected here by JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals Overlay -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
